@@ -1,17 +1,17 @@
+import { useEffect } from 'react';
 import './App.css';
 import Listacontactos from './componentes/contenedores/ListaContactos/ListaContactos';
+
+import Clock from './componentes/simples/clock/clock'
+
 
 
 function App() {
   
   return (
-    <div className="App">
+    <div className="App" >
       <header className="App-header">
-        
-       
-        <Listacontactos></Listacontactos>
-        
-      
+        <Clock></Clock>
       </header>
     </div>
   );

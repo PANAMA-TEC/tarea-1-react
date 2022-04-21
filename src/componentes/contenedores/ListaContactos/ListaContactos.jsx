@@ -8,10 +8,11 @@ const Listacontactos = () => {
     const DEFAULT_CONTACT = new Contacto ("Gabriel", "Garcia", "gagarcia@panama-tec.com", false);
     
     return (
-        
         <div className='lista-contactos'>
+            
             <h1 className='titulo-contactos'> LISTA DE CONTACTOS</h1>
             <Contactos contacto={DEFAULT_CONTACT}></Contactos>
+        
         </div>
     );
 }

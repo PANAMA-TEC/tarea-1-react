@@ -1,4 +1,14 @@
 .titulo-contactos {
     margin-bottom: 40px;
     border-style: none none solid none;
+    align-content: center;
+}
+
+.lista-contactos {
+    margin-bottom: 40px;
+    padding: 40px;
+    align-content: center;
+    border-radius: 10px;
+    
+    
 }

@@ -3,35 +3,45 @@ import PropTypes from 'prop-types';
 import { Contacto } from '../../../clases/contacto.class';
 import './contactos.css'
 
-const Contactos = ({contacto}) => {
+const Contactos = ({contacto, estado, borrar}) => {
     
     return (
-        <div className='contacto'>
-            <h2>
-                Nombre: {contacto.nombre } 
-            </h2>
-
-            <h2>
-                Apellido: {contacto.apellido }
-            </h2>
-
-            <h2>
-                Email: {contacto.email }
-            </h2>
-
-            <h2>
-                Estado: {contacto.conectado ? "EN LINEA":"FUERA DE LINEA" }
-            </h2>
+        
+        <div className='contacto shadow-sm'>
             
+            <div style={{fontSize:'20px'}}>
+                { contacto.nombre } { contacto.apellido } <br></br>
+            </div>
+
+            <div style={{fontSize:'20px'}}>
+                { contacto.email }
+            </div>
+           
+            <div style={{color:'tomato', fontSize:'20px', marginBottom:'20px'}}>
+                Estado: {contacto.conectado ? "EN LINEA":"FUERA DE LINEA" }
+            </div>
+            <div className='row'>
+                
+                <button  style={{marginRight:'20px', borderRadius:'5px', padding:'10px', fontWeight:'bold'}} onClick={ () => borrar(contacto)  }> 
+                
+                    ELIMINAR
+                
+                </button>
+                
+                <button style={{marginRight:'00px', borderRadius:'5px', padding:'10px', fontWeight:'bold'}}  onClick={ () => estado(contacto)  }> 
+                
+                    { !contacto.conectado ? "EN LINEA":"FUERA DE LINEA" }
+                
+                </button>
+            </div>
         </div>
     );
 };
 
-
 Contactos.propTypes = {
-    contacto: PropTypes.instanceOf(Contacto)
-
+    contacto: PropTypes.instanceOf(Contacto),
+    borrar: PropTypes.func.isRequired,
+    estado: PropTypes.func.isRequired
 };
-
 
 export default Contactos;

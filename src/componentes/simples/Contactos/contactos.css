@@ -1,7 +1,10 @@
 .contacto {
+    
     font-size: 14px;
-    padding: 20px;
-    border-style: solid;
+    padding: 40px;
     border-radius: 10px;
     margin-bottom: 30px;
+    background-color: white;
+    
+    
 }

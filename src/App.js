@@ -1,20 +1,18 @@
-import { useEffect } from 'react';
-import './App.css';
-import Listacontactos from './componentes/contenedores/ListaContactos/ListaContactos';
 
-import Clock from './componentes/simples/clock/clock'
+import './App.css';
+
 
 
 
 function App() {
   
   return (
-    <div className="App" >
-      <header className="App-header">
-        <Clock></Clock>
-      </header>
-    </div>
+    
+     <div></div>
+       
   );
+   
+
 }
 
 export default App;

@@ -5,15 +5,14 @@ import { Contacto } from '../../../../clases/contacto.class';
 
 
 
-const Formulariocontactos = ({ tareasActuales , agregarTarea}) => {
+const Formulariocontactos = ({ tareasActuales , agregarTarea }) => {
 
     const nombreRef = useRef('');
     const apellidoRef = useRef('');
     const emailRef = useRef('');
     
     const [formularioVisible,setFVisible] = useState(false);
-   /*  const levelRef = useRef(LEVELS.NORMAL); */
-
+   
     function crearContacto(e){
         
         e.preventDefault();
@@ -24,24 +23,23 @@ const Formulariocontactos = ({ tareasActuales , agregarTarea}) => {
             apellidoRef.current.value,
             emailRef.current.value,
             false,
-            
 
         );
         
         agregarTarea(contactoNuevo);
        
-   }
+    }
 
    function mostrarFormulario(){
+
        setFVisible(!formularioVisible);
-   }
+
+    }
     
     return (
-        <form className='' style={{borderRadius:'10px', }} onSubmit={ crearContacto } >
-
-            <div className='col-12 col-md-8 offset-md-2  col-xl-4 offset-xl-4 shadow-sm' style={{backgroundColor:'black',padding:'10px', borderRadius:'10px',}}>
-               
-                <label  class="col-12 col-form-label align-middle" style=  {   {   color:'white',   padding:'15px', fontWeight:'bold'}}  for="staticEmail" >
+        <form className='' style={{ borderRadius:'10px' }} onSubmit={ crearContacto } >
+            <div className='shadow-sm' style={{ backgroundColor:'black',padding:'10px', borderRadius:'10px' }}>
+                <label  class="col-12 col-form-label align-middle" style=  {{ color:'white',   padding:'15px', fontWeight:'bold' }}  for="staticEmail" >
                     <div className='row'>
                         
                         <div className='col-12'>FORMULARIO DE INTRODUCCIÓN DE CONTACTOS</div>
@@ -52,6 +50,7 @@ const Formulariocontactos = ({ tareasActuales , agregarTarea}) => {
                             <i  class=" bi bi-arrow-down-circle-fill col-1 mt-4" ></i>
 
                         </div> 
+
                     </div>
                 </label>
 
@@ -74,9 +73,10 @@ const Formulariocontactos = ({ tareasActuales , agregarTarea}) => {
 }
 
 Formulariocontactos.protoType = {
+    
     tareasActuales: PropTypes.number.isRequired,
     agregarTarea: PropTypes.func.isRequired
 
-
 }
+
 export default Formulariocontactos;

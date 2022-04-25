@@ -46,8 +46,8 @@ const Listacontactos = () => {
     
 
     return (
-        <div className='lista-contactos'>
-            <div className='col-12 col-md-8 offset-md-2 col-xl-4 offset-xl-4'>
+        <div className='lista-contactos col-12 col-md-8 col-lg-8 offset-md-2 col-xl-4 offset-xl-4 '>
+            <div className=''>
                 <h1 className='titulo-contactos col-12'> LISTA DE CONTACTOS</h1>
                 
                 {

@@ -37,8 +37,8 @@ const Formulariocontactos = ({ tareasActuales , agregarTarea }) => {
     }
     
     return (
-        <form className='' style={{ borderRadius:'10px' }} onSubmit={ crearContacto } >
-            <div className='shadow-sm' style={{ backgroundColor:'black',padding:'10px', borderRadius:'10px' }}>
+        <form className='shadow-sm' style={{ borderRadius:'10px' }} onSubmit={ crearContacto } >
+            <div className='shadow-sm' style={{ backgroundColor:'#303F9F',padding:'10px', borderRadius:'10px' }}>
                 <label  class="col-12 col-form-label align-middle" style=  {{ color:'white',   padding:'15px', fontWeight:'bold' }}  for="staticEmail" >
                     <div className='row'>
                         
